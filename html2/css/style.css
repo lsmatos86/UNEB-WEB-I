@@ -1,0 +1,28 @@
+body {
+    background-image: url("img/bg.png");
+    background-repeat: repeat-x;
+    font-family: system-ui, Arial, sans-serif;
+
+  }
+  .bg-branco{
+    background-color: rgb(255, 255, 255);
+
+  }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .table-layout,
+        .table-data {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .table-data th,
+        .table-data td {
+            padding: 6px 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
