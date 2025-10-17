@@ -1,195 +1,332 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-    <!-- Metadados importantes para acessibilidade e compatibilidade -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CURRICULO DE LEANDRO</title>
+    <!-- Definição de charset para correta exibição de caracteres -->
+    <meta charset="utf-8">
 
-    <!-- CSS externo deve ficar dentro do head -->
+    <!-- Carrega Bootstrap primeiro (para que style.css possa sobrescrever) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- estilos personalizados -->
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- Estilo mínimo para link "pular para o conteúdo" caso não exista no css externo -->
-    <style>
-        .skip-link {
-            position: absolute;
-            left: -999px;
-            top: auto;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-        }
-
-        .skip-link:focus {
-            left: 8px;
-            top: 8px;
-            width: auto;
-            height: auto;
-            padding: 8px;
-            background: #222;
-            color: #fff;
-            z-index: 1000;
-        }
-
-        /* Classe para conteúdo apenas para leitores de tela (visualmente oculto) */
-        .sr-only {
-            position: absolute;
-            left: -9999px;
-            width: 1px;
-            height: 1px;
-            overflow: hidden;
-        }
-    </style>
+    <!-- Título exibido na aba do navegador -->
+    <title>
+        CURRICULO VITAE - LEANDRO MATOS
+    </title>
 </head>
 
-<body style="background-color:grey;">
-    <!-- Link de pular para o cont  eúdo (acessível via teclado) -->
-    <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
-
-    <!-- Cabeçalho: role="banner" ajuda leitores de tela a identificar início -->
-    <header role="banner" aria-label="Cabeçalho do currículo">
-        <!-- Substitui tabela de layout por bloco simples: mantém imagem e título
-             - evita esconder o título de leitores de tela (não usar aria-hidden no contêiner do título) -->
-        <div style="text-align:center;">
-            <img src="img/foto.jpg  " alt="Foto de perfil de Leandro" width="90" style="vertical-align:middle;">
-            <h1 id="titulo-principal" style="display:inline-block; margin-left:12px; vertical-align:middle;">CURRICULO VITAE</h1>
-        </div>
-    </header>
-
-    <!-- Main landmark para facilitar navegação por leitores de tela -->
-    <main id="main-content" role="main" aria-labelledby="titulo-principal">
-        <!-- Tabela de dados do currículo:
-             - aria-label descreve a função da tabela
-             - primeira coluna usa <th scope="row"> para melhor associação linha/valor -->
-        <section aria-label="Informações do currículo">
-            <table class="table-data" role="table" aria-label="Dados do currículo">
-                <!-- caption assistiva para leitores de tela -->
-                <caption class="sr-only">Dados do currículo de Leandro</caption>
-                <tbody>
-                    <tr>
-                        <th scope="row">NOME:</th>
-                        <td>LEANDRO SILVA MATOS</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">CURSO:</th>
-                        <td>ENGENHARIA DE SOFTWARE</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">SEMESTRE:</th>
-                        <td>2025.1</td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2">
-                            <hr>
-                            <h2 id="dados-pessoais">DADOS PESSOAIS</h2>
-                            <!-- Lista com itens claros; links possuem rel seguro e texto descritivo -->
-                            <ul>
-                                <li><strong>Endereço:</strong> Rua Antônio da Silva Oliveira, 37 - Centro - Inhambupe - Bahia - CEP:
-                                    48490-000
-                                </li>
-                                <li><strong>Celular:</strong> <a href="https://wa.me/5575983361315" target="_blank"
-                                    rel="noopener noreferrer">(75) 9 8336-1315</a>
-                                </li>
-                                <li><strong>E-mail:</strong> <a href="mailto:leandro.matos@koppla.com.br"
-                                    rel="noopener noreferrer">leandro.matos@koppla.com.br</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2">
-                            <hr>
-                            <h2 id="escolaridade">ESCOLARIDADE</h2>
-                            <ul>
-                                <li><strong>ESPECIALIZAÇÃO EM PSICOLOGIA ORGANIZACIONAL E DO TRABALHO</strong> - <a
-                                    href="http://uniamerica.edu.br" target="_blank" rel="noopener noreferrer">UNIAMERICA</a>
-                                </li>
-                                <li><strong>MBA EM GESTÃO ESTRATÉGICA EM PESSOAS</strong> - <a href="http://estacio.br"
-                                    target="_blank" rel="noopener noreferrer">ESTÁCIO</a>
-                                </li>
-                                <li><strong>BACHARELADO EM PSICOLOGIA</strong> - <a href="http://unirb.edu.br"
-                                    target="_blank" rel="noopener noreferrer">UNIRB</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2">
-                            <hr>
-                            <h2 id="cursos-extras">CURSOS EXTRAS</h2>
-                            <ul>
-                                <li><strong>GREEN BELT</strong> - <a href="http://fm2s.com.br" target="_blank"
-                                    rel="noopener noreferrer">FM2S</a>
-                                </li>
-                                <li><strong>YELLOW BELT</strong> - <a href="http://fm2s.com.br" target="_blank"
-                                    rel="noopener noreferrer">FM2S</a>
-                                </li>
-                            </ul>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td colspan="2">
-                            <hr>
-                            <h2 id="experiencias">EXPERIENCIAS PROFISSIONAIS</h2>
-                            <ul>
-                                <li><strong>Diretor de Administração e Logística</strong> - Secretaria Municipal de Saúde de
-                                    Inhambupe - 2024
-                                </li>
-                                <li><strong>Coordenador Departamento de Gestão de Pessoas</strong> - Secretaria Municipal de Saúde de
-                                    Inhambupe - 2023-2024
-                                </li>
-                                <li><strong>Supervisor de Recursos Humanos</strong> - Itacitrus 2018-2021</li>
-                                <li><strong>Vendedor</strong> - RM Madeireira - 2011-2014</li>
-                                <li><strong>Técnico em Informática</strong> - Modelo Supermercado - 2005-2010</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Formulário de contato:
-             - h3 com id para aria-labelledby
-             - form usa aria-labelledby e campos requeridos têm aria-required
-             - botão tem type="submit"
+<body class="bg-imagem">
+    <!--
+            Container principal (Bootstrap):
+            - Centraliza o conteúdo e aplica padding interno
+            - Uso do grid do Bootstrap para layout responsivo
         -->
-        <section aria-labelledby="contato-title" align="center" style="margin-top:2rem;">
-            <h3 id="contato-title">Contato</h3>
-            <form id="contato-form" method="post" action="#" aria-labelledby="contato-title"
-                onsubmit="alert('Formulário enviado (simulado)'); return false;">
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome" name="nome" required aria-required="true" placeholder="Seu nome"><br><br>
+    <div class="container">
+        <br>
+        <br>
 
-                <label for="email">E-mail:</label><br>
-                <input type="email" id="email" name="email" required aria-required="true" placeholder="seu@exemplo.com"><br><br>
+        <!-- Linha com título principal -->
+        <div class="row justify-content-center">
+            <div class="col-10 btn-primary">
+                <!-- Título centralizado da página -->
+                <h2 align="center">CURRICULO VITAE</h2>
+            </div>
+        </div>
 
-                <label for="mensagem">Mensagem:</label><br>
-                <textarea id="mensagem" name="mensagem" rows="4" cols="40" required aria-required="true"
-                    placeholder="Escreva sua mensagem"></textarea><br><br>
+        <br>
+        <br>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+        <!-- Bloco com resumo e foto:
+                - col-8: texto descritivo
+                - col-2: foto dentro de um card
+                - Uso de classes Bootstrap para espaçamento e cards
+            -->
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card">
+                    <!-- Nome e resumo profissional -->
+                    <h3>LEANDRO SILVA MATOS</h3>
+                    <h5 class="text-muted">Bacharelando em Engenharia de Software, Psicólogo Especialista em Psicologia
+                        Organizacional e do Trabalho, MBA em Gestão Estratégica de Pessoas, Certificado Lean Six Sigma
+                        Green Belt</h5>
+                    <br>
+                    <h6>Autodidata, capacidade de desenvolvimento
+                        continuo, facilidade no aprendizado de novas habilidades
+                        nas mais diversas áreas. Habilidades já desenvolvidas
+                        em T.I. e Gestão e Seleção de Pessoas.</h6>
+                </div>
+            </div>
 
-    <!-- Mensagem de fim da página:
-         - role="status" para informar leitores de tela de mudanças de estado.
-         - footer manterá role="contentinfo".
-    -->
-    <div style="text-align:center; margin-top:1rem;">
-        <p id="end-message" role="status" aria-live="polite">Fim da Página</p>
-        <hr>
+            <!-- Coluna da foto -->
+            <div class="col-2">
+                <div class="card">
+                    <!-- Imagem de perfil; alt importante para acessibilidade -->
+                    <img src="img/foto.jpg" alt="eu">
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- Seção: Dados pessoais (título) -->
+        <div class="row justify-content-center">
+            <div class="col-10 btn-secondary">
+                <h4>DADOS PESSOAIS</h4>
+            </div>
+        </div>
+
+        <!-- Seção: Dados pessoais (conteúdo) -->
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-text">
+                        <!-- Endereço e cidade -->
+                        <p><b>Endereço: </b>Rua Antônio da Silva Oliveira, 37 - Centro</p>
+                        <p>Inhambpe - BA, CEP 48490-000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+        <!-- Seção: Escolaridade (título) -->
+        <div class="row justify-content-center">
+            <div class="col-10 btn-secondary">
+                <h4>ESCOLARIDADE</h4>
+            </div>
+        </div>
+
+        <!-- Seção: Escolaridade (lista de formações com links) -->
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">ESPECIALIZAÇÃO EM PSICOLOGIA ORGANIZACIONAL E DO TRABALHO</h5>
+                        <a href="http://www.descomplica.com.br" class="card-link">UNIAMERICA / DESCOMPLICA</a>
+                    </div>
+
+                    <!-- Cada formação adicional está em um card separado -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">MBA EM GESTÃO ESTRATÉGICA EM PESSOAS</h5>
+                            <a href="http://www.estacio.br" class="card-link">ESTÁCIOS</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">BACHARELADO EM PSICOLOGIA</h5>
+                            <a href="http://www.unirb.edu.br" class="card-link">UNIRB</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção: Cursos extras (título) -->
+        <div class="row justify-content-center">
+            <div class="col">
+                <br>
+                <br>
+                <div class="row justify-content-center">
+                    <div class="col-10 btn-secondary">
+                        <h4>CURSOS EXTRAS</h4>
+                    </div>
+                </div>
+
+                <!-- Lista de cursos extras -->
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">GREEN BELT</h5>
+                                <a href="http://www.fm2s.com.br" class="card-link">FM2S</a>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">YELLOW BELT</h5>
+                                    <a href="http://www.fm2s.com.br" class="card-link">FM2S</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <br>
+
+                <!-- Seção: Experiência profissional (título) -->
+                <div class="row justify-content-center">
+                    <div class="col-10 btn-secondary d-flex align-items-center h-150">
+                        <h4>EXPERIÊNCIA PROFISSIONAL</h4>
+                    </div>
+                </div>
+
+                <!-- Lista de experiências: cada cargo em um card com detalhes -->
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Diretor de Administração e Logística</h4>
+                                <h6 class="subtitle text-muted">2024</h6>
+                                <h6 class="subtitle">Secretaria Municipal de Saúde de Inhambupe</h6>
+                                <p class="card-text">Gestão e supervisão do processo de compras, logítica de
+                                    abastecimento das unidades. Renovação de contratos, abertura de adminstrativos, para
+                                    licitações/dispensas.</p>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Coordenador Departamento de Gestão de Pessoas</h5>
+                                    <h6 class="subtitle text-muted">2023-2024</h6>
+                                    <h6 class="subtitle">Secretaria Municipal de Saúde de Inhambupe</h6>
+                                    <p class="card-text">Coordenação e consolidadação de fechamento da folha de
+                                        pagamento para envio para o RH Central. Organização de Processos pastas e
+                                        arquivos dos servidores. Readequaçao de documentos do setor. Informatização de
+                                        processos e estruturação de arquivos digitais. Orientação de Servidores sobre o
+                                        Estatuto e encaminhamentos de solicitações.</p>
+                                </div>
+
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Supervisor de Recursos Humanos</h5>
+                                        <h6 class="subtitle text-muted">2018-2021</h6>
+                                        <h6 class="subtitle">Agropecuária Nossa Senhora do Bonsucesso LTDA - ITACITRUS
+                                        </h6>
+                                        <p class="card-text">Supervisão de Atividades do Setor de Recursos Humanos,
+                                            Recrutamento e Seleção de Pessoal, Suporte e acompanhamento de Sistema de
+                                            ERP, Treinamento de Informática para colaboradores. com noções básicas e
+                                            avançadas. Desenvolvimento e acompanhamento de Projetos em EGP,
+                                            acompanhamento processos (desenho, supervisão e sugestão de melhorias).
+                                            Desenvolvimento de Web Site. Desenvolvimento de Comunicação Visual Interna.
+                                            Treinamento para Equipe em diversas modalidades.</p>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Vendedor</h5>
+                                            <h6 class="subtitle text-muted">2011-2014</h6>
+                                            <h6 class="subtitle">RM Madeireira</h6>
+                                            <p class="card-text">Atendimento ao Cliente; Implantação e Manutenção de
+                                                Sistema de Automação Comercial.</p>
+                                        </div>
+
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Técnico em Informática</h5>
+                                                <h6 class="subtitle text-muted">2005-2010</h6>
+                                                <h6 class="subtitle">Modelo Supermercado</h6>
+                                                <p class="card-text">Implantação e Manutenção dos Sistemas de Automação
+                                                    (Hardware e Software), atuei no setor de compras, acompanhando
+                                                    contações e finalizando pedidos, acompanhando o recebimento dos
+                                                    pedidos e os inputs nos sistemas. Acompanhamento de Estoque,
+                                                    Atendimento ao cliente. Desenvolvimento de Marketing interno.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <!--CONTATO -->
+                <div class="row justify-content-center">
+                    <div class="col-10">
+                        <!-- Título do bloco (dentro da mesma coluna para garantir mesma largura) -->
+                        <div class="btn-secondary mb-3 p-2">
+                            <h4 class="m-0">CONTATO</h4>
+                        </div>
+
+                        <!-- Card contendo o formulário (mx-auto para centralizar, w-100 para ocupar a coluna) -->
+                        <div class="card mx-auto w-100">
+                            <div class="card-body">
+                                <!-- Formulário: id para JS, novalidate para validação custom via JS/HTML5 -->
+                                <form id="contact-form" novalidate>
+                                    <div class="mb-2">
+                                        <label for="contact-email" class="form-label">E-mail</label>
+                                        <input type="email" id="contact-email" name="email" class="form-control"
+                                            required placeholder="seu@email.com">
+                                    </div>
+
+                                    <div class="mb-2">
+                                        <label for="contact-message" class="form-label">Mensagem</label>
+                                        <textarea id="contact-message" name="mensagem" class="form-control" rows="4"
+                                            required placeholder="Sua mensagem"></textarea>
+                                    </div>
+
+                                    <div class="d-flex gap-2">
+                                        <button type="submit" class="btn btn-primary">Enviar</button>
+                                        <button type="reset" class="btn btn-secondary">Limpar</button>
+                                    </div>
+
+                                    <div id="contact-status" class="mt-2" role="status" aria-live="polite"></div>
+                                </form>
+
+                                <!-- Link mailto separado (opcional) -->
+                                <p class="mt-2"><a href="mailto:leandro.s.matos@hotmail.com">ou envie diretamente por
+                                        e‑mail</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- === FIM BLOCO DE CONTATO === -->
+
+            </div> <!-- fechar .container -->
+        </div>
     </div>
+    <br>
+    <br>
 
-    <!-- Rodapé (único role="contentinfo") -->
-    <footer role="contentinfo" aria-label="Rodapé">
-        <p><a href="https://www.google.com.br" target="_blank" rel="noopener noreferrer">Pesquisar no Google</a></p>
-    </footer>
+    <!-- Inclusão dos scripts JS necessários para o Bootstrap funcionar  -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--
+            JS simples:
+            - intercepta submit, valida campos, monta mailto codificado e abre cliente de e-mail
+            - evita aninhar form dentro de <a> e usa API correta para abrir mailto
+        -->
+    <script>
+        (function () {
+            const DEST = 'leandro.s.matos@hotmail.com'; // destinatário
+            const form = document.getElementById('contact-form');
+            const status = document.getElementById('contact-status');
+
+            form.addEventListener('submit', function (ev) {
+                ev.preventDefault(); // evita reload
+
+                // Leitura e validação mínima
+                const email = document.getElementById('contact-email').value.trim();
+                const msg = document.getElementById('contact-message').value.trim();
+
+                if (!email || !msg) {
+                    status.textContent = 'Preencha e-mail e mensagem.';
+                    status.className = 'text-danger';
+                    return;
+                }
+
+                // Monta subject/body e codifica
+                const subject = encodeURIComponent('Contato via site');
+                const body = encodeURIComponent('E-mail: ' + email + '\n\nMensagem:\n' + msg);
+
+                // Abre cliente de e-mail do usuário (mailto)
+                window.location.href = `mailto:${DEST}?subject=${subject}&body=${body}`;
+
+                // Feedback acessível
+                status.textContent = 'Abrindo cliente de e-mail... Se não abrir, copie a mensagem e envie manualmente.';
+                status.className = 'text-success';
+            });
+        })();
+    </script>
 </body>
 
 </html>
