@@ -1,0 +1,47 @@
+body {
+    background-image: url("img/bg.png");
+    background-size: cover; /* ajusta a imagem para cobrir o fundo */
+    background-repeat: no-repeat; /* evita repetição da imagem */   
+    font-family: system-ui, Arial, sans-serif;
+
+  }
+  .bg-branco{
+    background-color: rgb(255, 255, 255);
+
+  }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .table-layout,
+        .table-data {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        .table-data th,
+        .table-data td {
+            padding: 6px 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+/* REMOVIDO: não sobrescrever classes de grid do Bootstrap */
+/* .col-10 { max-width: 100%; box-sizing: border-box; } */
+
+/* Ajuste específico: garante que o card dentro de uma .col-10 ocupe toda a largura da coluna
+   sem interferir na própria classe .col-10 do Bootstrap */
+.col-10 > .card {
+    width: 100%;
+    box-sizing: border-box;
+}
+.col-10 > .card .card-body {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Remova ou comente estas regras de depuração quando não precisar mais */
+.container * { outline: none; } /* opcional: permaneça vazio ou remova */
+ /* .col-10 { border: 1px dashed rgba(0,0,0,0.12); } */

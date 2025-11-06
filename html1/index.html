@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <!-- Define a codificação e viewport para compatibilidade com dispositivos móveis -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Página Simples em HTML</title>
+
+    <!--
+        Estilos internos (CSS)
+        - Mantidos simples para a página de exemplo
+        - Define fonte, espaçamento e aparência básica da tabela
+    -->
+    <style>
+        body { font-family: system-ui, Arial, sans-serif; line-height: 1.5; padding: 20px; }
+        header { margin-bottom: 18px; }
+        section { margin-bottom: 22px; }
+        table { border-collapse: collapse; width: 100%; max-width: 640px; }
+        table, th, td { border: 1px solid #ccc; }
+        th, td { padding: 8px 10px; text-align: left; }
+        .controles { margin-top: 8px; }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho da página: título e imagem -->
+    <header>
+        <h1>Esse é um título para uma página simples</h1>
+        <!-- imagem de exemplo; width controla tamanho visual -->
+        <img src="imagem.jpeg" alt="Example PNG" width="180" style="display:block;margin:8px 0;">
+    </header>
+
+    <!-- Seção de listas: demonstra listas ordenadas e não ordenadas -->
+    <section>
+        <h2>Listas</h2>
+        <p>Lista desordenada</p>
+        <ul>
+            <li>HTML Básico</li>
+            <li>Fundamentos de CSS</li>
+            <li>Indtrodução a Javascritp </li>
+        </ul>
+
+        <p>Lista Ordenada</p>
+        <ol>
+            <li>Criar uma estrutura</li>
+            <li>Adicionar Estilos</li>
+        </ol>
+    </section>
+
+    <!-- Seção com uma tabela simples para demonstrar marcação tabular -->
+    <section>
+        <h2>Tabela simples</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantidade</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Caderno</td>
+                    <td>2</td>
+                    <td>R$29,00</td>
+                </tr>
+                <tr>
+                    <td>Caneta Azul</td>
+                    <td>5</td>
+                    <td>R$2,50</td>
+                </tr>
+                <tr>
+                    <td>Pasta</td>
+                    <td>1</td>
+                    <td>R$1,25</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!--
+        Seção de formulário simples:
+        - action="#" indica que não há envio real para servidor (padrão demonstrativo)
+        - method="post" é o método HTTP se houver backend
+        - campos: nome (obrigatório), email, assunto (select), checkbox e botões
+    -->
+    <section>
+        <h2>Formulário simples</h2>
+        <form action="#" method="post">
+            <label>
+                Nome:<br>
+                <!-- campo obrigatório -->
+                <input type="text" name="nome" placeholder="seu nome" required>
+            </label>
+            <div class="controles">
+                <label>
+                    Email:
+                    <input type="email" name="email" placeholder="you@exEmplo.com">
+                </label>
+            </div>
+
+            <div class="controles">
+                <label>
+                    Escolha um assunto:
+                    <select name="assunto">
+                        <option>Geral</option>
+                        <option>Suporte</option>
+                        <option>Feedback</option>
+                    </select>
+                </label>
+            </div>
+
+            <div class="controles">
+                <!-- checkbox para demonstrar opções adicionais (ex.: inscrição) -->
+                <label><input type="checkbox" name="assunto"> assunto to newsletter</label>
+            </div>
+
+            <div class="controles">
+                <!--
+                    Observação: type="enviar" não é um valor válido para <button>.
+                    Para enviar o formulário, use type="submit".
+                    Mantive o código original, mas atualize se desejar funcionamento real.
+                -->
+                <button type="enviar">enviar</button>
+                <!-- botão que executa uma ação JavaScript simples -->
+                <button type="button" onclick="alert('Botão Clicado')">Clique aqui</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Rodapé com link externo; rel="noopener" por segurança ao abrir nova aba -->
+    <footer>
+        <p><a href="https://www.google.com.br" target="_blank" rel="noopener">Link simples  utilzando tag a</a></p>
+    </footer>
+</body>
+</html>

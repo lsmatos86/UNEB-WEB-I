@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Filmes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="banner">
+      <div class="container">
+        <h1 class="titulo">CataFilmes</h1>
+        <h2 class="subtitulo">Seu Catálogo de Filmes Online</h2>
+        <nav class="menu">
+          <ul>
+            <li><a href="#destaque">Destaques</a></li>
+            <li><a href="#catalogo">Catálogo</a></li>
+            <li><a href="#lancamentos">Lançamentos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="destaque" class="destaque">
+      <h3>Destaques da Semana</h3>
+      <article class="card destaque-card">
+        <div class="card-conteudo">
+          <img src="https://uploads.maisgoias.com.br/2023/07/b30c3fba-oppenheimer.jpg" alt="Oppenheimer" class="poster">
+          <div class="filme-info">
+            <h4 class="filme-titulo">Oppenheimer</h4>
+            <p class="sinopse">
+              A história do cientista J. Robert Oppenheimer e seu papel no desenvolvimento da bomba atômica.
+            </p>
+            <ul class="generos">
+              <li>Drama</li>
+              <li>Biografia</li>
+              <li>História</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="catalogo" class="catalogo">
+      <h3>Catálogo Completo</h3>
+      <div class="grid-filmes">
+        <article class="card filme">
+          <img src="https://br.web.img3.acsta.net/pictures/23/06/21/21/10/1335465.jpg" alt="Barbie" class="poster">
+          <div class="filme-info">
+            <h4><a href="#">Barbie</a></h4>
+            <p class="meta">2023 • Comédia/Fantasia</p>
+          </div>
+        </article>
+
+        <article class="card filme">
+          <img src="https://resenhandosonhos.com/wp-content/uploads/2023/05/guardioes-da-galaxia-poster.webp" alt="Guardiões da Galáxia Vol. 3" class="poster">
+          <div class="filme-info">
+            <h4><a href="#">Guardiões da Galáxia Vol. 3</a></h4>
+            <p class="meta">2023 • Ação/Aventura</p>
+          </div>
+        </article>
+
+        <article class="card filme">
+          <img src="https://br.web.img3.acsta.net/pictures/23/09/13/16/59/5541526.png" alt="Assassinos da Lua das Flores" class="poster">
+          <div class="filme-info">
+            <h4><a href="#">Assassinos da Lua das Flores</a></h4>
+            <p class="meta">2023 • Drama/Crime</p>
+          </div>
+        </article>
+        <article class="card filme">
+          <img src="https://br.web.img3.acsta.net/medias/nmedia/18/87/30/56/19874127.jpg" alt="Central do Brasil" class="poster">
+          <div class="filme-info">
+            <h4><a href="#">Central do Brasil</a></h4>
+            <p class="meta">1998 • Nacional/Drama</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="content-wrapper">
+      <section id="lancamentos" class="lancamentos">
+        <h3>Próximos Lançamentos</h3>
+        <table class="tabela">
+          <thead>
+            <tr>
+              <th>Filme</th>
+              <th>Data</th>
+              <th>Gênero</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Duna: Parte 2</td>
+              <td>Mar/2024</td>
+              <td>Ficção Científica</td>
+              <td>Em breve</td>
+            </tr>
+            <tr>
+              <td>Deadpool 3</td>
+              <td>Jul/2024</td>
+              <td>Ação</td>
+              <td>Em produção</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <aside class="sidebar">
+        <h3>Filtrar por Gênero</h3>
+        <ul class="lista-generos">
+          <li><a href="#">Ação</a></li>
+          <li><a href="#">Aventura</a></li>
+          <li><a href="#">Drama</a></li>
+          <li><a href="#">Comédia</a></li>
+          <li><a href="#">Ficção Científica</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <section id="sobre" class="sobre">
+      <h3>Sobre o Catafilmes</h3>
+      <p>
+        Seu destino para descobrir e acompanhar os melhores filmes. 
+        Mantemos você atualizado sobre lançamentos, críticas e novidades do cinema.
+      </p>
+      <p>
+        Contato: <a href="mailto:contato@catafilmes.naoexiste.com">contato@catafilmes.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>© 2024 CataFilmes — Todos os direitos reservados</p>
+    </div>
+  </footer>
+</body>
+</html>

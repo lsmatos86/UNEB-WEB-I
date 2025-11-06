@@ -1,0 +1,172 @@
+:root {
+    /* Variáveis de Cores */
+    --cor-fundo-principal: #fdfdfd; /* beige */
+    --cor-fundo-secao: #00ccff;     /* rgb(221, 193, 150) */
+    --cor-fundo-box: #e6f8ff;       /* antiquewhite */
+    --cor-primaria: #0a66c2;        /* Azul para botões/destaque */
+    --cor-texto-padrao: #333;
+
+    /* Variáveis de Dimensões e Estilos */
+    --largura-secao: 400px;
+    --largura-box: 350px;
+    --raio-borda: 20px;
+    --sombra-padrao: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    --espacamento-vertical: 1rem;
+
+    --altura-btn-img: 50px; /* Variável para altura dos botões de imagem */
+    --altura-coracao: 25px; /* Variável para altura das imagens de coração */
+}
+
+body {
+    background-color: var(--cor-fundo-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-texto-padrao);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: var(--espacamento-vertical);
+    color: var(--cor-primaria);
+}
+
+section {
+    background-color: var(--cor-fundo-secao);
+    width: var(--largura-secao);
+    min-height: 470px;
+    padding: 5px;
+    margin: var(--espacamento-vertical) auto;
+    border-radius: var(--raio-borda);
+    box-shadow: var(--sombra-padrao);
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+div#status-bar, div#numero, div#resultado, .box-fim-jogo { 
+    background-color: var(--cor-fundo-box);
+    width: var(--largura-box);
+    border-radius: var(--raio-borda);
+    margin: 0 auto; 
+    padding: 5px;
+}
+
+div#status-bar {
+    text-align: right;
+    height: 35px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding-right: 10px;
+    gap: 5px;
+}
+
+.coracao-vida {
+    height: var(--altura-coracao);
+    width: auto;
+}
+
+div#numero {
+    background-color: var(--cor-fundo-box);
+    width: var(--largura-box);
+    border-radius: var(--raio-borda);
+    margin: 0 auto; 
+    padding: 15px 5px; 
+    height: auto; 
+    min-height: 200px; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; 
+    gap: 15px;
+}
+
+div#box-palpite-chute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+
+div#entrada-palpite {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+div#resultado {
+    text-align: center;
+    min-height: 240px; 
+}
+
+.box-fim-jogo {
+    background-color: var(--cor-fundo-box);
+    width: var(--largura-box);
+    height: 240px; 
+    border-radius: var(--raio-borda);
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-fim-jogo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+p#status {
+    margin: 0;
+    line-height: 1;
+}
+
+p#txtRodape {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    padding-top: var(--espacamento-vertical);
+}
+
+p#txtResultado {
+    text-align: left;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    white-space: pre-wrap;
+}
+
+.btn-jogo {
+    cursor: pointer;
+    height: var(--altura-btn-img); 
+    width: auto;
+    transition: transform 0.1s ease;
+}
+
+.btn-jogo:hover {
+    transform: scale(1.05);
+}
+
+div#box-botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: var(--altura-btn-img); 
+    margin: 10px 0;
+}
+
+input[type="number"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80px;
+    text-align: center;
+}
+
+.oculto {
+    display: none !important; 
+}

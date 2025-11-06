@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhar</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+       <h1>Adivinhe o Número</h1>
+    </header>
+    <section>
+        <div id="status-bar">
+            <p id="status"></p> 
+        </div>
+        <div id="numero">
+            <h2>Número secreto entre 1 e 100.</h2>
+            
+            <div id="box-botoes">
+                <img src="img/btn-iniciar.png" id="btIniciar" alt="Iniciar Jogo" class="btn-jogo">
+                <img src="img/btn-reiniciar.png" id="btReiniciar" alt="Reiniciar Jogo" class="btn-jogo oculto">
+            </div>
+
+            <div id="box-palpite-chute" class="oculto"> 
+                <div id="entrada-palpite">
+                    <label for="num1">Palpite:</label> 
+                    <input type="number" id="num1">
+                </div>
+                
+                <img src="img/btn-chutar.png" id="btChutar" alt="Chutar" class="btn-jogo"> 
+            </div>
+        </div>
+
+        <div id="resultado" class="oculto"> 
+            <h3><strong>Histórico de Palpites</strong></h3>
+            <p id="txtResultado">...</p>
+        </div>
+        
+        <div id="box-vitoria" class="box-fim-jogo oculto">
+            <img src="img/parabens.png" alt="Parabéns, você acertou!" class="img-fim-jogo">
+        </div>
+
+        <div id="box-derrota" class="box-fim-jogo oculto">
+            <img src="img/tente-novamente.png" alt="Tente novamente!" class="img-fim-jogo">
+        </div>
+
+    </section>
+    <footer>
+      <p id="txtRodape">Desenvolvido na displina WEB1</p>
+    </footer>
+
+    <script src="interacao.js"></script>
+</body>
+</html>
