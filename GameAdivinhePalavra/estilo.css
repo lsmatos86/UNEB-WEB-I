@@ -1,115 +1,208 @@
+:root {
+    --cor-fundo-principal: #fdfdfd; 
+    --cor-fundo-secao: #00ccff; 
+    --cor-fundo-box: #e6f8ff; 
+    --cor-primaria: #0a66c2; 
+    --cor-texto-padrao: #333;
+
+ 
+    --largura-secao: 400px;
+    --largura-box: 350px;
+    --raio-borda: 20px;
+    --sombra-padrao: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    --espacamento-vertical: 1rem;
+
+    --altura-btn-img: 50px; 
+    --altura-coracao: 25px; 
+}
+
 body {
-    background-color: beige;
+    background-color: var(--cor-fundo-principal);
+    font-family: sans-serif;
 }
 
 h1 {
     text-align: center;
+    color: #5c4033; 
 }
 
 section {
-    background-color: rgb(221, 193, 150);
+    background-color: var(--cor-fundo-secao);
     width: 420px;
-    height: 400px;
-    padding: 5px;
+    height: auto; 
+    padding: 15px;
     margin: auto;
     border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.2); 
 }
 
 div#box-imagem {
-    //background-color: antiquewhite;
+    background-color: var(--cor-fundo-box);
     border-radius: 10px;
     height: 150px;
     width: 400px;
     margin: 10px auto;
-
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
-div#box-iniciar{
+
+div#box-iniciar {
     height: 40px;
     text-align: center;
     margin: 10px auto;  
-    
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 div#box-palavra {
-    background-color: antiquewhite;
+    background-color: var(--cor-fundo-box);
     border-radius: 10px;
     height: 50px;
     width: 400px;
     margin: 10px auto;
-
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 div#box-teclado {
-    background-color: antiquewhite;
+    background-color: var(--cor-fundo-principal);
     text-align: center;
     border-radius: 10px;
     height: auto;
     min-height: 100px;
     width: 400px;
-
     margin: auto;
-
-    gap: 1px; /*espaço entre os botões*/
+    padding: 10px 0; 
+    
+    gap: 5px; 
     display: flex;
-    flex-wrap: wrap; /* permite quebrar linha automaticamente */
+    flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
 }
+
 .tecla {
-    background-color: #cfa97e;
+    background-color: var(--cor-fundo-secao);
     color: white;
     font-weight: bold;
-    font-size: 20px;        /* 🔹 Aumenta o tamanho da letra */
+    font-size: 16px;
     border: none;
-    border-radius: 8px;     /* 🔹 Deixa mais arredondado */
-    padding: 10px 14px;     /* 🔹 Aumenta o tamanho do botão */
-    margin: 6px;            /* 🔹 Mais espaçamento entre botões */
-    min-height: 100px;
+    border-radius: 5px;    
+    width: 35px;
+    height: 35px; 
+    cursor: pointer; 
+    
+    
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
 .tecla:hover {
-    background-color: #b88a5b;
-    transform: scale(1.05);
+    background-color: var(--cor-primaria);
+    transform: scale(1.1);
 }
 
 .tecla:disabled {
-    background-color: #d6c4aa;
+    background-color: var(--cor-fundo-box);
     color: #fff;
     cursor: not-allowed;
     transform: none;
+    opacity: 0.6;
 }
 
 img#img-menino {
-    height: 100%;
+    height: 90%;
     width: auto;
     transition: 0.3s ease;
 }
+
 img#btn_iniciar {
     height: 100%;
     width: auto;
     transition: 0.3s ease;
     cursor: pointer;
-    
+}
+
+img#btn_iniciar:hover {
+    transform: scale(1.05);
 }
 
 p#palavra {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 28px;
+    letter-spacing: 5px;
+    margin: 0;
 }
 
 p#txtRodape {
     text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 12px;
 }
 
+.tecla.certo {
+    background-color: #2ecc71; 
+    color: white;
+    border: 1px solid #27ae60;
+}
+
+.tecla.errado {
+    background-color: #e74c3c; 
+    color: white;
+    border: 1px solid #c0392b;
+}
+
+.hidden {
+    display: none !important; 
+}
+
+#box-resultado-final {
+    background-color: var(--cor-fundo-box);
+    border-radius: 10px;
+    height: 200px; 
+    width: 400px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+#box-resultado-final img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}
+
+#btn_iniciar {
+    cursor: pointer;
+    width: 180px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+#btn_iniciar:hover {
+    transform: scale(1.05);
+}
+
+#img-menino {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#dica-fase {
+    text-align: center;
+    color: var(--cor-primaria);
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px auto;
+    background-color: var(--cor-fundo-secao);
+    padding: 10px;
+    border-radius: 8px;
+    width: 380px; 
+}

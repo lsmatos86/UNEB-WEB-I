@@ -1,14 +1,20 @@
-{
-  "frutas": [
-    "ABACAXI",
-    "MELANCIA",
-    "BANANA",
-    "MORANGO",
-    "UVA",
-    "LARANJA",
-    "PERA",
-    "MANGA",
-    "GOIABA",
-    "CEREJA"
-  ]
-}
+[
+  {
+    "dica": "Frutas 🍉",
+    "palavras": [
+      "ABACAXI", "MELANCIA", "BANANA", "MORANGO", "UVA", "LARANJA", "PERA", "MANGA", "GOIABA", "CEREJA"
+    ]
+  },
+  {
+    "dica": "Animais 🐶",
+    "palavras": [
+      "CACHORRO", "GATO", "LEAO", "TIGRE", "ELEFANTE", "GIRAFA", "MACACO", "HIPOPOTAMO", "ZEBRA", "COBRA"
+    ]
+  },
+  {
+    "dica": "Objetos da Casa 🏠",
+    "palavras": [
+      "CADEIRA", "MESA", "COMPUTADOR", "JANELA", "PORTA", "TELEVISAO", "SOFA", "ARMARIO", "CAMA", "ESPELHO"
+    ]
+  }
+]

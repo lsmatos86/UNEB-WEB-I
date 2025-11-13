@@ -1,20 +1,20 @@
 :root {
-    /* Variáveis de Cores */
-    --cor-fundo-principal: #fdfdfd; /* beige */
-    --cor-fundo-secao: #00ccff;     /* rgb(221, 193, 150) */
-    --cor-fundo-box: #e6f8ff;       /* antiquewhite */
-    --cor-primaria: #0a66c2;        /* Azul para botões/destaque */
+ 
+    --cor-fundo-principal: #fdfdfd; 
+    --cor-fundo-secao: #00ccff; 
+    --cor-fundo-box: #e6f8ff; 
+    --cor-primaria: #0a66c2; 
     --cor-texto-padrao: #333;
 
-    /* Variáveis de Dimensões e Estilos */
+ 
     --largura-secao: 400px;
     --largura-box: 350px;
     --raio-borda: 20px;
     --sombra-padrao: 2px 2px 5px rgba(0, 0, 0, 0.2);
     --espacamento-vertical: 1rem;
 
-    --altura-btn-img: 50px; /* Variável para altura dos botões de imagem */
-    --altura-coracao: 25px; /* Variável para altura das imagens de coração */
+    --altura-btn-img: 50px; 
+    --altura-coracao: 25px; 
 }
 
 body {
